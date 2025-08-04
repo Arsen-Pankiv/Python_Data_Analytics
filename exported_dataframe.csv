@@ -1,0 +1,14 @@
+,code,area,date,median_salary,life_satisfaction,mean_salary,recycling_pct,population_size,num_of_jobs,job_title,month_var
+0,E09000002,barking and dagenham,1999-01-11,21480.0,,23620.0,3.0,162444.0,115000.0,Database Administrator,Jan
+1,E09000009,ealing,1999-01-11,20580.0,,25046.0,12.0,302252.0,120000.0,Statistician,Jan
+2,N92000002,brent,1999-01-03,15798.0,,19093.0,,1679006.0,140000.0,Database Administrator,Jan
+3,E09000005,brent,1999-01-12,18532.0,,20911.0,7.0,260317.0,134000.0,Database Administrator,Jan
+4,E13000002,outer london,1999-02-03,,,,,4403196.0,177000.0,Database Administrator,Feb
+5,E92000001,england,1999-02-11,17939.0,,21561.0,10.0,49032872.0,146000.0,Database Administrator,Feb
+6,K04000001,england and wales,1999-02-05,17974.0,,21549.0,,51933471.0,85000.0,Operations Analyst,Feb
+7,E13000001,inner london,1999-02-07,,,,,2750716.0,890121.0,Statistician,Feb
+8,K02000001,united kingdom,1999-02-12,17803.0,,21315.0,,58684427.0,,Statistician,Feb
+9,K04000001,england and wales,1999-02-05,17974.0,,21549.0,,51933471.0,85000.0,Operations Analyst,Feb
+10,N92000002,brent,1999-04-03,15798.0,,19093.0,,1679006.0,140000.0,Database Administrator,Apr
+11,E09000003,brent,1999-04-03,,,23128.0,8.0,313469.0,291000.0,Database Administrator,Apr
+12,E09000004,bexley,1999-04-05,18621.0,,21386.0,18.0,217458.0,160000.0,Statistician,Apr
