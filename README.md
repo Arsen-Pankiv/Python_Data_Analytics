@@ -156,10 +156,80 @@ This subset was plotted as a line chart with **merged2[sum2].plot(kind="line")**
 
 ## Matplotlib 
 ### Histograms
+
+We began by loading the dataset with pd.read_csv() and converting the "date" column to a **datetime** format using pd.to_datetime() to enable time-based operations. The **"skills_list"** column, which contained string representations of lists, was cleaned by applying ast.literal_eval() within .apply() so that each value became a proper Python list. 
+
+ I then filtered the DataFrame to keep only rows where **"job_title"** equaled **"Statistician"**. Using the "mean_salary" column, I created a histogram with .plot(kind="hist", bins=10, edgecolor="black") to visualize the salary distribution.
+<img src="screenshots_p/image_28.png" alt="image_28" width="450" height="200" />
+
+The x-axis range was limited with **plt.xlim(0, 45000)**, and tick labels were formatted into thousands with a **“£K”** style using plt.FuncFormatter. Lastly, I set a descriptive title and customized axis labels to make the chart clearer.
+
+<img src="screenshots_p/image_29.png" alt="image_29" width="400" height="300" />
+
 ### Charts
-### Pie plot
+
+
+**Firstly**, we used rf["job_title"].value_counts() and rf["area"].value_counts().head(5) to count job titles and the top five areas.
+
+<img src="screenshots_p/image_30.png" alt="image_30" width="450" height="200" />
+
+Then, we created a figure with two subplots using **plt.subplots(1, 2)**, where fig represents the whole figure and ax is an array of individual plot axes. We plotted job titles on **ax[1** and areas on **ax[0]** with .plot(kind="bar", ax=...), and finally **adjusted spacing** with fig.tight_layout() for a cleaner layout.
+
+<img src="screenshots_p/image_31.png" alt="image_31" width="400" height="300" />
+
+
+### Pie charts
+
+#### Section 1 
+
+**Firstly**, we loaded and cleaned the dataset by converting date to datetime and parsing skills_list with ast.literal_eval(). Then, we used **value_counts()** on job_title to count **each role**, plotted the results as a **pie chart** with startangle=90 and percentage labels (autopct="%1.1f%%"), set a title, removed the y-axis label, and displayed the chart.
+
+<img src="screenshots_p/image_32.png" alt="image_32" width="400" height="300" />
+
+#### Section 2
+
+We began by selecting the **three** relevant columns *(job_title, job__health_insurance, and work_from_home)* into a new DataFrame **rf_three**. Then, ywe created a subplot layout with one row and three columns using **plt.subplots(1,3)**, giving us three separate ax objects to work with. We defined a dictionary **dict1** to pair each column name with a descriptive chart title.
+
+<img src="screenshots_p/image_33.png" alt="image_33" width="600" height="200" />
+
+Using **a for loop** with enumerate(), we iterated over column–title pairs, used value_counts() to get **category counts**, and plotted them as pie charts with ax[i].pie(). We set a 90° start angle, displayed **percentages** with autopct, reduced label **font size** via textprops={'fontsize': 6}, added **category names** as labels, and set individual **subplot titles** with ax[i].set_title().
+
 ### Scatter Plot
+
+#### Section 1 
+
+We first created an **artificial dataset** as a Python dictionary and converted it into a pandas **DataFrame** named rf using pd.DataFrame().
+
+<img src="screenshots_p/image_34.png" alt="image_34" width="300" height="300" />
+
+
+Then, we plotted **a scatter plot** with rf.plot(kind="scatter", x="skill_count", y="job_skills") to visualize **the relationship between skill counts and their corresponding job skills**.
+
+<img src="screenshots_p/image_35.png" alt="image_35" width="500" height="300" />
+
+#### Section 2 
+
+We **first** loaded the CSV file into the rf DataFrame.
+Then, the date column was converted to a **datetime format** with pd.to_datetime(), and skills_list strings were converted to **Python lists** using ast.literal_eval() inside .apply().
+We filtered the dataset to only include rows where job_title equals **"Statistician"** and used **.explode()** on skills_list so each skill had its own row.
+Using **.groupby()** with .agg(), we created a new DataFrame that had **new_column** for the count of each skill and **stat_salary** for its median salary.
+
+<img src="screenshots_p/image_36.png" alt="image_36" width="300" height="300" />
+
+This **grouped DataFrame** was sorted in descending order of skill count with .sort_values().
+We plotted **a scatter plot** with .plot(kind="scatter"), using new_column as the x-axis and stat_salary as the y-axis, then set axis labels and a title.
+
+<img src="screenshots_p/image_37.png" alt="image_37" width="700" height="200" />
+
+**Lastly**, we looped through the DataFrame index with **enumerate()** and used plt.text() to place each skill’s name next to its corresponding point in the chart.
+
+
+<img src="screenshots_p/image_38.png" alt="image_37" width="500" height="350" />
+
+
+
 ### Box Plot
+
 ### Advanced Customization 
 
 ## Seaborn 
@@ -168,13 +238,6 @@ This subset was plotted as a line chart with **merged2[sum2].plot(kind="line")**
 
 ### Box Plot
 
-## Final Projects
 
-### Project 1
-### Project 2
-### Project 3
-### Project 4
-### Project 5
-### Project 6
 
 
