@@ -1,0 +1,8 @@
+﻿area,mean_salary,recycling_pct,population_size,num_of_jobs,job_title,date
+city of london,48922,0,6581,122000,Operations Analyst,01/02/1999
+barking and dagenham,23620,3,162444,115000,Database Administrator,01/02/1999
+brent,23128,8,313469,291000,Database Administrator,01/02/1999
+bexley,21386,18,217458,160000,Statistician,01/02/1999
+brent,20911,6,260317,134000,Statistician,01/02/1999
+bromley,21293,13,,113000,Statistician,01/02/1999
+camden,30249,13,,84000,Statistician,01/02/1999

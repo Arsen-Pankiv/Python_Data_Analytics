@@ -1,0 +1,27 @@
+﻿code,region,record_date,avg_temp,air_quality,annual_rainfall,crime_rate,population_density,total_businesses,industry_type
+E09000001,metro central,15/12/2000,14.2,45,1200,12.5,8923,1450,Finance
+E09000002,northern zone,18/11/2000,11.8,58,980,15.2,18567,1380,Tech
+E09000003,eastern sector,22/03/2000,,62,1100,8.7,35678,3450,Tech
+E09000004,western plains,10/05/2000,13.5,38,850,9.1,24876,1950,Data Science
+E09000005,eastern sector,05/12/2000,12.8,42,920,11.3,29543,1670,Data Science
+E09000006,southern coast,14/08/2000,,51,780,7.8,,1350,Data Science
+E09000007,urban core,30/03/2000,15.1,67,1150,14.2,,980,Data Science
+E09000008,northwest,25/02/2000,12.3,55,890,10.5,,1250,Data Science
+E09000009,central hub,05/11/2000,13.9,49,1050,8.9,34567,1450,Data Science
+E12000008,southeast,10/12/2000,12.6,52,950,7.5,912345,920,Finance
+E12000009,southwest,18/04/2000,11.2,61,820,9.8,567890,1020,Finance
+E13000001,inner metro,07/07/2000,,,,,312456,1050,Data Science
+E13000002,outer metro,15/03/2000,,,,,512345,2150,Tech
+E92000001,countrywide,20/11/2000,12.4,47,880,11.2,5678901,1820,Tech
+K02000001,national,12/12/2000,12.1,53,,,6789012,,Data Science
+K03000001,mainland,10/01/2000,12.3,50,,,6523456,,Finance
+K04000001,central,15/05/2000,12.5,48,,,6023456,1050,Finance
+N92000002,eastern sector,18/03/2000,10.6,56,,,192345,1700,Tech
+S92000003,northern,22/09/2000,11.4,59,,,587654,950,Tech
+W92000004,western,08/08/2000,11.6,54,,,,980,Tech
+E09000001,metro central,15/12/2000,14.2,45,1200,12.5,8923,1450,Finance
+E09000004,western plains,10/05/2000,13.5,38,850,9.1,24876,1950,Data Science
+K03000001,mainland,10/01/2000,12.3,50,,,6523456,,Finance
+E13000001,inner metro,07/07/2000,,,,,312456,10504,Data Science
+K02000001,national,12/12/2000,12.1,53,,,6789012,,Data Science
+E09000005,eastern sector,05/12/2000,12.8,42,920,11.3,29543,1670,Tech

@@ -1,0 +1,8 @@
+﻿area,crime_rate,population_density,total_businesses,industry_type,date
+city of london,12.5,8923,1450,Finance,01/01/1999
+barking and dagenham,15.2,18567,1380,Tech,01/01/1999
+brent,8.7,35678,3450,Tech,01/01/1999
+bexley,9.1,24876,1950,Data Science,01/01/1999
+brent,11.3,29543,1670,Data Science,01/01/1999
+bromley,7.8,,1350,Data Science,01/01/1999
+camden,14.2,,980,Data Science,01/01/1999

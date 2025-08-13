@@ -1,0 +1,27 @@
+﻿code,area,date,median_salary,life_satisfaction,mean_salary,recycling_pct,population_size,num_of_jobs,job_title,skills_list,job__health_insurance,work_from_home
+E09000001,city of london,12/12/1999,33020,,48922,0,6581,122000,Operations Analyst,"['SQL', 'Business Intelligence', 'Dashboarding']",TRUE,FALSE
+E09000002,barking and dagenham,01/11/1999,21480,,23620,3,162444,115000,Database Administrator,"['Data Recovery', 'Security', 'NoSQL']",FALSE,TRUE
+E09000003,brent,03/03/1999,,,23128,8,313469,291000,Database Administrator,"['PostgreSQL', 'Data Integrity', 'Automation']",TRUE,TRUE
+E09000004,bexley,07/05/1999,18621,,21386,18,217458,160000,Statistician,"['Probability', 'SAS', 'Regression']",FALSE,FALSE
+E09000005,brent,12/12/1999,18532,,20911,6,260317,134000,Statistician,"['Statistics', 'Data Cleaning', 'Machine Learning']",TRUE,TRUE
+E09000006,bromley,09/08/1999,,,21293,13,,113000,Statistician,"['R', 'Python', 'Data Analysis']",FALSE,FALSE
+E09000007,camden,11/03/1999,23677,,30249,13,,84000,Statistician,,TRUE,FALSE
+E09000008,croydon,03/02/1999,19563,,22205,13,,102000,Statistician,"['R', 'Python', 'Data Analysis']",TRUE,TRUE
+E09000009,ealing,01/11/1999,20580,,25046,12,302252,120000,Statistician,"['Probability', 'SAS', 'Regression']",FALSE,TRUE
+E12000008,south east,10/12/1999,18737,,22361,15,7955124,74000,Operations Analyst,"['Excel', 'Reporting', 'Problem Solving']",TRUE,FALSE
+E12000009,south west,11/04/1999,16727,,19203,14,4880958,81000,Operations Analyst,"['Operations Research', 'KPIs', 'Communication']",FALSE,FALSE
+E13000001,inner london,07/07/1999,,,,,2750716,89000,Statistician,"['Probability', 'SAS', 'Regression']",TRUE,TRUE
+E13000002,outer london,02/03/1999,,,,,4403196,177000,Database Administrator,"['Data Recovery', 'Security', 'NoSQL']",FALSE,TRUE
+E92000001,england,02/11/1999,17939,,21561,10,49032872,146000,Database Administrator,"['MySQL', 'Oracle', 'Performance Monitoring']",TRUE,FALSE
+K02000001,united kingdom,11/12/1999,17803,,21314,,58684427,,Statistician,"['R', 'Python', 'Data Analysis']",FALSE,TRUE
+K03000001,great britain,08/01/1999,17866,,21379,,57005421,,Operations Analyst,"['Python', 'Optimization', 'Process Improvement']",TRUE,FALSE
+K04000001,england and wales,02/05/1999,17974,,21549,,51933471,85000,Operations Analyst,"['Python', 'Optimization', 'Process Improvement']",FALSE,FALSE
+N92000002,brent,04/03/1999,15798,,19093,,1679006,140000,Database Administrator,"['Data Recovery', 'Security', 'NoSQL']",TRUE,TRUE
+S92000003,scotland,06/09/1999,16914,,19667,,5071950,76000,Database Administrator,,FALSE,FALSE
+W92000004,wales,10/08/1999,16457,,18486,,,84000,Database Administrator,"['SQL', 'Database Tuning', 'Backup Management']",TRUE,TRUE
+E09000001,city of london,07/12/1999,33020,,48922,0,6581,122000,Operations Analyst,"['Python', 'Optimization', 'Process Improvement']",FALSE,TRUE
+E09000004,bexley,09/05/1999,18621,,21386,18,217458,160000,Statistician,"['Probability', 'SAS', 'Regression']",TRUE,FALSE
+K03000001,great britain,11/01/1999,17866,,21379,,57005421,,Operations Analyst,,TRUE,TRUE
+E13000001,inner london,02/07/1999,,,,,2750716,890121,Statistician,"['Statistics', 'Data Cleaning', 'Machine Learning']",FALSE,FALSE
+K02000001,united kingdom,02/12/1999,17803,,21315,,58684427,,Statistician,"['Probability', 'SAS', 'Regression']",TRUE,FALSE
+E09000005,brent,09/12/1999,18532,,20911,7,260317,134000,Database Administrator,"['MySQL', 'Oracle', 'Performance Monitoring']",FALSE,TRUE
