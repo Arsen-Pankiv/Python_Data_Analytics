@@ -28,7 +28,10 @@ We addressed missing data by calculating **median values** for key columns such 
 
 Following data cleaning, we applied **various functions** to enhance the dataset. For instance, we defined a projected_salary function that increased median salaries by **3%**, which we then applied across the column using **.apply()**, creating a new column **median_salr_inflated**. 
 
-![image_3](/screenshots_p/image_3.png)
+
+<img src="screenshots_p/image_3.png" alt="image_3" width="400" height="200" />
+
+
 <img src="screenshots_p/image_4.png" alt="image_9" width="300" height="300" />
 
 Additionally, we demonstrated the use of lambda functions to perform similar inline transformations concisely. To implement conditional logic at the row level, we created a function selection21 that applies a salary increase only if the number of jobs exceeds 120,000, otherwise returning 1. This function was applied **row-wise using df.apply(..., axis=1)**, resulting in a new column **row_lambda**. These steps illustrate how combining Pandas' vectorized operations with custom Python functions enables powerful, flexible data transformations and insights extraction.
@@ -40,7 +43,8 @@ Additionally, we demonstrated the use of lambda functions to perform similar inl
 ### Section 1 - Index Management
 
 We first assigned a custom name, **"value_index"**, to the DataFrame’s index to better identify it. We, then demonstrated how to locate rows with a specific value in the "area" column (e.g., "brent"). Since the resulting subset **rf_brent** may have a non-sequential index, we used **reset_index(inplace=True)** to reset the index back to the default integer sequence while preserving the old index as a column. 
-![image_6](/screenshots_p/image_6.png)
+
+<img src="screenshots_p/image_6.png" alt="image_6" width="350" height="150" />
 
 To restore the original index as the DataFrame’s index, we then applied set_index("value_index", inplace=True). This workflow shows how we managed, reset, and reassigned indexes effectively to maintain clarity and order in the DataFrame.
 
@@ -170,9 +174,11 @@ This subset was plotted as a line chart with **merged2[sum2].plot(kind="line")**
 We began by loading the dataset with pd.read_csv() and converting the "date" column to a **datetime** format using pd.to_datetime() to enable time-based operations. The **"skills_list"** column, which contained string representations of lists, was cleaned by applying ast.literal_eval() within .apply() so that each value became a proper Python list. 
 
  We then filtered the DataFrame to keep only rows where **"job_title"** equaled **"Statistician"**. Using the **"mean_salary"** column, we created a histogram with .plot(kind="hist", bins=10, edgecolor="black") to visualize the salary distribution.
+ 
 <img src="screenshots_p/image_28.png" alt="image_28" width="450" height="200" />
 
 The x-axis range was limited with **plt.xlim(0, 45000)**, and tick labels were formatted into thousands with a **“£K”** style using **plt.FuncFormatter**. Lastly, We set a descriptive title and **customized axis labels** to make the chart clearer.
+
 
 <img src="screenshots_p/image_29.png" alt="image_29" width="400" height="300" />
 
