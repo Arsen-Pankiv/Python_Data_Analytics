@@ -48,7 +48,9 @@ We first assigned a custom name, **"value_index"**, to the DataFrame’s index t
 
 To restore the original index as the DataFrame’s index, we then applied set_index("value_index", inplace=True). This workflow shows how we managed, reset, and reassigned indexes effectively to maintain clarity and order in the DataFrame.
 
-![image_7](/screenshots_p/image_7.png)
+
+<img src="screenshots_p/image_7.png" alt="image_7" width="400" height="200" />
+
 ### Section 2 - Pivot Table (pivot_table, group_by)
 
 First, we counted the number of **job listings per job title** using two approaches: rf.groupby("job_title").size() and rf.pivot_table(index="job_title", aggfunc="size"). This gave us an overview of the distribution of job titles in the dataset. 
@@ -66,7 +68,8 @@ We then  identified the top **2 most frequent areas** using rf["area"].value_cou
 
  Finally, we plotted the filtered data as a grouped bar chart to compare average salaries by job title within these key areas. 
 
- ![image_12](/screenshots_p/image_12.png)
+
+ <img src="screenshots_p/image_12.png" alt="image_12" width="400" height="300" />
 
 ### Section 3 - Explode Function
 
