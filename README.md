@@ -283,30 +283,9 @@ We calculated **totals across months** with .sum(), sorted skills by **overall f
 
 **Finally**, we plotted the **top 5 skills** as a **customized line chart** using a thicker linewidth, dotted linestyle, viridis colormap, circle markers, adjusted marker size, and a defined figsize—with labeled axes and a descriptive title.
 
-## Seaborn 
+## Additonal Projects with Seaborn 
 
-### Introduction
-
-We started by importing pandas, matplotlib.pyplot, ast, and later **seaborn**.
-The dataset was loaded from CSV into **rf**, with date converted to **datetime format** and **skills_list** parsed from string representations into actual Python **lists** using ast.literal_eval().
-We then filtered the data to only include rows where **job_title** was **"Statistician"**, created a copy, removed rows with **missing mean_salary values**, and used .explode() so that each skill appeared in a **separate row**.
-
-<img src="screenshots_p/image_44.png" alt="image_44" width="600" height="300" />
-
-**Next**, we grouped the data by skills_list and aggregated **two metrics**: the number of occurrences **(count)** and the median salary **(median)**. From this grouped data, we created **two separate DataFrames** — top_pay for the **top 10 highest-paid skills** (sorted by median salary) and **top_count for the top 10 most in-demand skills** (sorted by count).
-
-<img src="screenshots_p/image_45.png" alt="image_45" width="250" height="250" />
-
-For visualization, we created **a two-row subplot layout** (fig, ax = plt.subplots(2, 1)) and set the Seaborn theme to **"whitegrid"** for a clean background.
-
-<img src="screenshots_p/image_46.png" alt="image_46" width="700" height="550" />
-
-
-We plotted **top_pay** and **top_count** as horizontal bar charts with **sns.barplot()**, customizing colors (dark:salmon_r and light:pink), axis limits, and labels for clarity.
-
-The **y-axes** were **inverted** to show the highest values at the top, and fig.tight_layout() was applied to prevent **overlapping** elements.
-
-### Histogram 
+### Project 1
 
 We filtered the dataset for **Statisticians** and used **sns.displot()** with kind="kde" and **fill=True** to create a smooth, filled density plot of mean salaries.
 
@@ -316,19 +295,80 @@ We set the x-axis limits to **0–45,000**, formatted the x-axis labels in **“
 
 <img src="screenshots_p/image_48.png" alt="image_48" width="700" height="500" />
 
-### Box Plot
+The code for **Project 1** can be found [here](/seaborn_histogram.ipynb).
 
-We first filtered the dataset for **three specific job titles** and created a list of their **mean salaries**, then plotted these as a horizontal boxplot using plt.boxplot() to compare salary distributions.
+## Project 2
 
-<img src="screenshots_p/image_49.png" alt="image_49" width="400" height="150" />
+In this code, we began by importing essential libraries—pandas for data manipulation, **matplotlib** and **seaborn** for visualization, and **ast** to safely convert stringified lists into Python lists. We loaded the CSV file into the DataFrame **rf**, converted the date column to **datetime format** using **pd.to_datetime()**, and **applied ast.literal_eval()** to transform skills_list strings into actual **lists**. We then **filtered** the dataset to include only rows where job_title was **“Statistician”** and removed entries with missing mean_salary using **dropna()**.
 
-**Next**, we used **sns.boxplot()** to create a more **polished boxplot** of mean_salary across **all job titles** directly from the DataFrame, providing a visual comparison of salary distributions.
+<img src="additional_projects/screenshots_ad/image_1.png" alt="image_1" width="250" height="200" />
 
-<img src="screenshots_p/image_50.png" alt="image_50" width="600" height="400" />
+
+
+
+**The explode()** function was applied to **skills_list** so that each skill appeared in a separate row, allowing us to create a **pivot table** (pivot_table()) that aggregated the **count** of postings and **median** salary per skill.
+
+<img src="additional_projects/screenshots_ad/image_2.png" alt="image_2" width="250" height="200" />
+
+We sorted this pivot table **twice—once** by highest **median salary** (pivoted_salary_sorted) and once by **highest demand** (pivoted_count_sorted).
+
+<img src="additional_projects/screenshots_ad/image_3.png" alt="image_3" width="500" height="400" />
+
+Finally, we used **seaborn’s barplot()** to visualize the **top skills** in two stacked plots, formatting the salary axis with **FuncFormatter()** for currency display, inverting the y-axis so top skills appear first, and applying **tight_layout()** to improve readability.
+
+The code for **Project 2** can be found [here](/additional_projects/summing_salary_skill.ipynb).
+
+## Project 3
+
+We started by loading the CSV file into the DataFrame **rf**, converted the date column to a **datetime format** using pd.to_datetime(), and applied **ast.literal_eval()** to turn the skills_list strings into actual Python **lists**. We then filtered the data to keep only rows where job_title was **“Statistician”** (stat) and used **value_counts().head(8)** to find the **eight most common entries** in the area column. The result was converted to a DataFrame with to_frame() and stored in area_count. 
+
+<img src="additional_projects/screenshots_ad/image_4.png" alt="image_4" width="500" height="400" />
+
+For visualization, we set a **white grid theme** with sns.set_theme(), plotted the **counts** using sns.barplot() with a purple palette, removed the chart spines using sns.despine(), and customized the plot with plt.title(), plt.xlabel(), and plt.ylabel() before displaying it with plt.show().
+
+
+The code for **Project 3** can be found [here](/additional_projects/summing_project_chap_1.ipynb).
+
+## Project 4
+
+In this code, we began by importing **pandas**, **matplotlib**, **seaborn**, and **ast** to handle data loading, cleaning, and visualization. We loaded the CSV file into the DataFrame **rf**, converted the date column to **datetime** with pd.to_datetime(), and used ast.literal_eval() to transform skills_list from **string** form into Python **lists**.
+
+<img src="additional_projects/screenshots_ad/image_5.png" alt="image_5" width="500" height="400" />
+
+A copy of the data **(copied)** was made and expanded with **explode()** so that each **skill** had its own row (copied_exploded). We then calculated the **total job postings** per title using value_counts().reset_index() in percentage_table. Next, we created **pivot_3** with pivot_table() to count how often each skill appeared for each job title **(skill_count)**, sorted it by **frequency**, and extracted the **unique** job titles (pivot_title).
+
+<img src="additional_projects/screenshots_ad/image_7.png" alt="image_7" width="1000" height="50" />
+
+We merged **pivot_3** with **percentage_table** into **jobs_merged** to include the **total job counts**, then calculated the percentage of postings mentioning each skill **(skill_percent)**. 
+
+<img src="additional_projects/screenshots_ad/image_6.png" alt="image_6" width="500" height="400" />
+
+
+For visualization, we used **plt.subplots()** to create one horizontal bar plot per job title, showing the **top five skills** and their **percentages** with sns.barplot(). We formatted each subplot with titles, inverted y-axes, removed redundant x-axis ticks, and limited the x-axis range to 0–60. **Finally**, we added text labels displaying each **percentage** directly on the bars using ax.text() and **adjusted spacing** with fig.tight_layout().
+
+
+The code for **Project 4** can be found [here](/additional_projects/summing_skill_demand.ipynb).
+
+## Project 5
+
+We began by loading the CSV file into the DataFrame **rf**, converted the date column to **datetime** using pd.to_datetime(), and applied ast.literal_eval() to convert the skills_list **strings** into Python **lists**. We created a copy **(ng_frame)** and removed rows with **missin**g mean_salary using **dropna()**.
+
+<img src="additional_projects/screenshots_ad/image_8.png" alt="image_8" width="600" height="100" />
+
+We then extracted all **unique job titles** sorted by **frequency** with value_counts().index.to_list() (job_titles2) and filtered **ng_frame** to keep only these titles in titles_frame. 
+To order our plot, we built a **pivot table** (pivot_table) using median salary per job title, sorted it in **descending order** (pivot_sorted), and stored the sorted job titles as **pivot_index**.
+
+<img src="additional_projects/screenshots_ad/image_9.png" alt="image_9" width="500" height="400" />
+
+For visualization, we used **sns.boxplot()** to display **salary distributions** for each **job title**, ordered according to **pivot_index**. We applied a white grid style with sns.set_theme(), labeled axes with plt.xlabel() and plt.ylabel(), set a salary range limit (plt.xlim()), and formatted the x-axis as pounds using plt.FuncFormatter(). **Finally**, we displayed the chart with plt.show().
+
+
+The code for **Project 5** can be found [here](/additional_projects/summing_salary_analysis.ipynb).
+
 
 ### Conclusion
 
-This project demonstrated how **Python** and **Panda**s can be used to clean, transform, and analyze data effectively. By handling missing values, duplicates, and complex structures, and applying visualization with **Matplotlib**, we were able to extract meaningful insights and present them clearly. The workflow highlights the power of combining data manipulation and visualization for real-world analysis.
+This project demonstrated how **Python** and **Panda**s can be used to clean, transform, and analyze data effectively. By handling missing values, duplicates, and complex structures, and applying visualization with **Matplotlib** and **Seaborn**, we were able to extract meaningful insights and present them clearly. The workflow highlights the power of combining data manipulation and visualization for real-world analysis.
 
 
 
