@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-This project focuses on data cleaning, transformation, and visualization using **Python**. The analysis uses both **artificial datasets** and **datasets created by the author**, which can be found in the **project repository**. By applying **Pandas** for data manipulation and **Matplotlib** for visualization, the project demonstrates how to handle missing values, duplicates, and complex data structures, ultimately extracting meaningful insights from raw data.
+This project focuses on data cleaning, transformation, and visualization using **Python**. The analysis uses both **artificial datasets** and **datasets created by the author**, which are available in the **project repository**. By applying **Pandas** for data manipulation and **Matplotlib** and **Seaborn** for visualization, the project demonstrates how to handle missing values, duplicates, and complex data structures, while creating **clear** and insightful **visua**l representations of the data.
 
 The **datasets used** in this project are available for access [here](/datasets).
 
@@ -172,7 +172,7 @@ This subset was plotted as a line chart with **merged2[sum2].plot(kind="line")**
 
 
 ## Matplotlib 
-### Histograms
+### Histogram
 
 We began by loading the dataset with pd.read_csv() and converting the "date" column to a **datetime** format using pd.to_datetime() to enable time-based operations. The **"skills_list"** column, which contained string representations of lists, was cleaned by applying ast.literal_eval() within .apply() so that each value became a proper Python list. 
 
@@ -185,7 +185,7 @@ The x-axis range was limited with **plt.xlim(0, 45000)**, and tick labels were f
 
 <img src="screenshots_p/image_29.png" alt="image_29" width="400" height="300" />
 
-### Charts
+### Bar charts
 
 
 **Firstly**, we used rf["job_title"].value_counts() and rf["area"].value_counts().head(5) to count job titles and the **top five** areas.
@@ -197,7 +197,7 @@ Then, we created a figure with two subplots using **plt.subplots(1, 2)**, where 
 <img src="screenshots_p/image_31.png" alt="image_31" width="400" height="300" />
 
 
-### Pie charts
+### Pie chart
 
 #### Section 1 
 
@@ -293,7 +293,7 @@ We filtered the dataset for **Statisticians** and used **sns.displot()** with ki
 
 We set the x-axis limits to **0–45,000**, formatted the x-axis labels in **“£K”** using **FuncFormatter**, and added a title and axis labels for clarity.
 
-<img src="screenshots_p/image_48.png" alt="image_48" width="700" height="500" />
+<img src="screenshots_p/image_48.png" alt="image_48" width="500" height="250" />
 
 The code for **Project 1** can be found [here](/seaborn_histogram.ipynb).
 
